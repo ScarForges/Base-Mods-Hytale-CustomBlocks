@@ -3,13 +3,13 @@
 ## Que hace este mod?
 
 Mod tutorial que enseña a crear **3 tipos de bloques custom** diferentes.
-Los 3 bloques comparten el mismo modelo y textura, pero cada uno demuestra un patron distinto:
+Cada bloque tiene su propio modelo y textura, y cada uno demuestra un patron distinto:
 
-| Bloque | Tipo | Que enseña |
-|--------|------|------------|
-| **Tutorial Enchant Table** | UI Interactiva | Abrir una Custom UI con botones funcionales |
-| **Tutorial Trash Block** | Inventario | Bloque con contenedor (ItemContainerState) |
-| **Tutorial Craft Table** | Mesa de Crafteo | Sistema nativo de crafting (Bench) |
+| Bloque | ID para /give | Tipo | Que enseña |
+|--------|--------------|------|------------|
+| **Tutorial Enchant Table** | `Tutorial_Customui_Table` | UI Interactiva | Abrir una Custom UI con botones funcionales |
+| **Tutorial Trash Block** | `Tutorial_Trash_Block` | Inventario | Bloque con contenedor (ItemContainerState) |
+| **Tutorial Craft Table** | `Tutorial_Craft_Table` | Mesa de Crafteo | Sistema nativo de crafting (Bench) |
 
 ---
 
@@ -41,7 +41,7 @@ TutorialCustomBlock/
         │
         ├── Server/Item/
         │   ├── Items/
-        │   │   ├── Tutorial_Enchant_Table.json   # Bloque 1: UI Interactiva
+        │   │   ├── Tutorial_Customui_Table.json  # Bloque 1: UI Interactiva
         │   │   ├── Tutorial_Trash_Block.json     # Bloque 2: Inventario
         │   │   └── Tutorial_Craft_Table.json     # Bloque 3: Mesa de Crafteo
         │   │
@@ -53,13 +53,17 @@ TutorialCustomBlock/
         │
         └── Common/
             ├── Blocks/Benches/
-            │   └── Tutorial_Enchant_Table.png    # Textura del bloque (compartida)
+            │   ├── Tutorial1.blockymodel         # Modelo bloque 1 (Enchant Table)
+            │   ├── Tutorial2.blockymodel         # Modelo bloque 2 (Trash Block)
+            │   └── Tutorial3.blockymodel         # Modelo bloque 3 (Craft Table)
             │
             ├── Icons/
             │   ├── ItemsGenerated/
-            │   │   └── Tutorial_Enchant_Table.png    # Icono del inventario
+            │   │   ├── Tutorial1.png             # Icono bloque 1
+            │   │   ├── Tutorial2.png             # Icono bloque 2
+            │   │   └── Tutorial3.png             # Icono bloque 3
             │   └── CraftingCategories/
-            │       └── Tutorial_Basic.png            # Icono de categoria del crafteo
+            │       └── Tutorial_Basic.png        # Icono de categorias de crafteo
             │
             └── UI/Custom/Pages/EnchantTable/
                 └── EnchantTablePanel.ui          # Layout de la UI
@@ -87,7 +91,7 @@ Click derecho en bloque
 ```
 
 **Archivos involucrados:**
-- `Tutorial_Enchant_Table.json` - Definicion del bloque
+- `Tutorial_Customui_Table.json` - Definicion del bloque
 - `Tutorial_Open_EnchantUI.json` (x2) - RootInteractions + Interactions
 - `EnchantTableInteraction.java` - Logica de interaccion
 - `EnchantTablePanel.java` - Logica de la UI
@@ -121,7 +125,7 @@ Click derecho en bloque
 
 Funciona como las mesas de crafteo nativas del juego.
 Se configura 100% por JSON, sin codigo Java necesario.
-De momento esta vacia (sin recetas), lista para añadir las que quieras.
+Incluye **2 categorias** de crafteo configuradas (`Tutorial_Basic` y `Tutorial_2tab`), listas para añadir recetas.
 
 **Flujo:**
 ```
@@ -149,22 +153,26 @@ El JAR se genera en `build/libs/ScarTutorialCustomBlock-1.0.0.jar`.
 
 1. Copia el JAR a la carpeta de mods: `%APPDATA%/Hytale/UserData/Mods/`
 2. Inicia el servidor
-3. Usa `/give Tutorial_Enchant_Table` para obtener el bloque de UI
+3. Usa `/give Tutorial_Customui_Table` para obtener el bloque de UI
 4. Usa `/give Tutorial_Trash_Block` para obtener el bloque inventario
 5. Usa `/give Tutorial_Craft_Table` para obtener la mesa de crafteo
 6. Coloca y haz click derecho en cada bloque para probar
 
 ---
 
-## Modelo y Textura
+## Modelos y Texturas
 
-Los 3 bloques comparten:
-- **Modelo:** `Blocks/Benches/Alchemy.blockymodel` (modelo nativo del juego)
-- **Textura:** `Blocks/Benches/Tutorial_Enchant_Table.png` (textura custom)
+Cada bloque tiene su propio modelo y textura independientes:
 
-Para cambiar la textura, reemplaza el PNG en:
+| Bloque | Modelo | Textura | Icono |
+|--------|--------|---------|-------|
+| Enchant Table | `Blocks/Benches/Tutorial1.blockymodel` | `Blocks/Benches/Tutorial1.png` | `Icons/ItemsGenerated/Tutorial1.png` |
+| Trash Block | `Blocks/Benches/Tutorial2.blockymodel` | `Blocks/Benches/Tutorial2.png` | `Icons/ItemsGenerated/Tutorial2.png` |
+| Craft Table | `Blocks/Benches/Tutorial3.blockymodel` | `Blocks/Benches/Tutorial3.png` | `Icons/ItemsGenerated/Tutorial3.png` |
+
+Para cambiar la textura de un bloque, reemplaza el PNG correspondiente en:
 ```
-Common/Blocks/Benches/Tutorial_Enchant_Table.png
+Common/Blocks/Benches/TutorialX.png
 ```
 
 ---
