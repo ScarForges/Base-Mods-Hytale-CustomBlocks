@@ -1,0 +1,48 @@
+{
+  "TranslationProperties": {
+    "Name": "Tutorial Enchant Table",
+    "Description": "A custom enchanting table. Right-click to open the enchantment UI!"
+  },
+  "Icon": "Icons/ItemsGenerated/Tutorial1.png",
+  "Categories": [
+    "Furniture.Benches"
+  ],
+  "PlayerAnimationsId": "Block",
+  "ItemLevel": 0,
+  "MaxStack": 1,
+  "BlockType": {
+    "Material": "Solid",
+    "DrawType": "Model",
+    "Opacity": "Transparent",
+    "Group": "",
+    "Flags": {
+      "IsUsable": true
+    },
+    "CustomModel": "Blocks/Benches/Tutorial1.blockymodel",
+    "CustomModelTexture": [
+      {
+        "Texture": "Blocks/Benches/Tutorial1.png"
+      }
+    ],
+    "VariantRotation": "NESW",
+    "Interactions": {
+      "Use": "Tutorial_Open_EnchantUI",
+      "Primary": "Break_Container"
+    },
+    "Gathering": {
+      "Breaking": {
+        "GatherType": "Benches"
+      }
+    },
+    "BlockParticleSetId": "Stone",
+    "BlockSoundSetId": "Stone",
+    "ParticleColor": "#4a2d7a",
+    "Support": {
+      "Down": [
+        {
+          "FaceType": "Full"
+        }
+      ]
+    }
+  }
+}

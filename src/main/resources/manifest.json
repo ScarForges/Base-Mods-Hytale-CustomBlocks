@@ -1,0 +1,21 @@
+{
+    "Group": "${group}",
+    "Name": "${name}",
+    "Version": "${version}",
+    "Description": "${description}",
+    "Authors": [
+        {
+            "Name": "ScarForges"
+        }
+    ],
+    "ServerVersion": "${server_version}",
+    "Dependencies": {
+        "Hytale:InteractionModule": "*",
+        "Hytale:EntityModule": "*"
+    },
+    "OptionalDependencies": {},
+    "LoadOrder": "POSTWORLD",
+    "DisabledByDefault": false,
+    "Main": "${entry_point}",
+    "IncludesAssetPack": true
+}

@@ -1,0 +1,21 @@
+{
+    "Group": "com.scarforges.tutorialblock",
+    "Name": "ScarTutorialCustomBlock",
+    "Version": "1.0.0",
+    "Description": "Tutorial - Bloque Custom con Textura + Interaccion + Custom UI",
+    "Authors": [
+        {
+            "Name": "ScarForges"
+        }
+    ],
+    "ServerVersion": "*",
+    "Dependencies": {
+        "Hytale:InteractionModule": "*",
+        "Hytale:EntityModule": "*"
+    },
+    "OptionalDependencies": {},
+    "LoadOrder": "POSTWORLD",
+    "DisabledByDefault": false,
+    "Main": "com.scarforges.tutorialblock.TutorialBlockPlugin",
+    "IncludesAssetPack": true
+}

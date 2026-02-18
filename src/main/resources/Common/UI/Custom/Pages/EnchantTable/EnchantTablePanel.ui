@@ -1,0 +1,75 @@
+$C = "../../Common.ui";
+
+Group {
+    Background: #000000(0.5);
+    LayoutMode: CenterMiddle;
+    FlexWeight: 1;
+
+    $C.@DecoratedContainer #EnchantPanel {
+        Anchor: (Width: 360, Height: 220);
+
+        #Title {
+            Group {
+                LayoutMode: Left;
+
+                $C.@Title {
+                    @Text = "Mesa de Encantamiento";
+                }
+
+                Group {
+                    LayoutMode: Right;
+                    Anchor: (Height: 25, Right: 10);
+
+                    Button #CloseButton {
+                        Anchor: (Width: 25, Height: 25);
+                        Style: $C.@CancelButtonStyle;
+                        TooltipText: "Cerrar";
+                        Padding: (Full: 5);
+
+                        Label {
+                            Text: "X";
+                            Style: (TextColor: #ffffff, HorizontalAlignment: Center, VerticalAlignment: Center, FontSize: 13, RenderBold: true);
+                        }
+                    }
+                }
+            }
+        }
+
+        #Content {
+            LayoutMode: Top;
+            Padding: (Full: 15);
+
+            Label {
+                Text: "¡Bienvenido! Haz clic en el botón de abajo.";
+                Style: (TextColor: #96a9be, FontSize: 13, HorizontalAlignment: Center);
+                Anchor: (Height: 30);
+            }
+
+            Group { Anchor: (Height: 15); }
+
+            Group {
+                LayoutMode: CenterMiddle;
+                Anchor: (Height: 45);
+
+                Button #BtnHello {
+                    Anchor: (Width: 200, Height: 38);
+                    LayoutMode: CenterMiddle;
+                    Style: $C.@DefaultButtonStyle;
+
+                    Label {
+                        Text: "SALUDAR";
+                        Style: (TextColor: #ffffff, FontSize: 13, RenderBold: true, HorizontalAlignment: Center, VerticalAlignment: Center, LetterSpacing: 1);
+                    }
+                }
+            }
+
+            Group { Anchor: (Height: 10); }
+
+            Label #StatusText {
+                Text: "";
+                Style: (TextColor: #f1c40f, FontSize: 11, HorizontalAlignment: Center);
+                Anchor: (Height: 20);
+            }
+        }
+    }
+}

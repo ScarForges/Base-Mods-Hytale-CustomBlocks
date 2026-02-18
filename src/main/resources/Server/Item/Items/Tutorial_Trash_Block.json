@@ -1,0 +1,52 @@
+{
+  "TranslationProperties": {
+    "Name": "Tutorial Trash Block",
+    "Description": "A container block that counts and trashes items when closed."
+  },
+  "Icon": "Icons/ItemsGenerated/Tutorial2.png",
+  "Categories": [
+    "Furniture.Containers"
+  ],
+  "PlayerAnimationsId": "Block",
+  "BlockType": {
+    "State": {
+      "Id": "Tutorial_Trash_Block",
+      "Capacity": 27
+    },
+    "Material": "Solid",
+    "DrawType": "Model",
+    "Opacity": "Transparent",
+    "CustomModel": "Blocks/Benches/Tutorial2.blockymodel",
+    "CustomModelTexture": [
+      {
+        "Texture": "Blocks/Benches/Tutorial2.png",
+        "Weight": 1
+      }
+    ],
+    "Flags": {
+      "IsUsable": true
+    },
+    "VariantRotation": "NESW",
+    "Gathering": {
+      "Breaking": {
+        "GatherType": "Rocks"
+      }
+    },
+    "Interactions": {
+      "Primary": "Break_Container",
+      "Use": "Open_Container"
+    },
+    "Support": {
+      "Down": [
+        {
+          "FaceType": "Full"
+        }
+      ]
+    },
+    "BlockSoundSetId": "Stone",
+    "ParticleColor": "#5C583E",
+    "BlockParticleSetId": "Stone"
+  },
+  "MaxStack": 1,
+  "ItemSoundSetId": "ISS_Blocks_Stone"
+}

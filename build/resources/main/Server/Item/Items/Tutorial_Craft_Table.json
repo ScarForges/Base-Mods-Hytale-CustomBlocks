@@ -1,0 +1,69 @@
+{
+  "TranslationProperties": {
+    "Name": "Tutorial Craft Table",
+    "Description": "A custom crafting bench with one category. Uses Hytale's native crafting UI."
+  },
+  "Icon": "Icons/ItemsGenerated/Tutorial3.png",
+  "Categories": [
+    "Furniture.Benches"
+  ],
+  "PlayerAnimationsId": "Block",
+  "BlockType": {
+    "Material": "Solid",
+    "DrawType": "Model",
+    "Opacity": "Transparent",
+    "CustomModel": "Blocks/Benches/Tutorial3.blockymodel",
+    "CustomModelTexture": [
+      {
+        "Texture": "Blocks/Benches/Tutorial3.png",
+        "Weight": 1
+      }
+    ],
+    "VariantRotation": "NESW",
+    "Flags": {
+      "IsUsable": true
+    },
+    "Bench": {
+      "Type": "Crafting",
+      "Id": "TutorialCraftBench",
+      "Categories": [
+        {
+          "Id": "Tutorial_Basic",
+          "Icon": "Icons/CraftingCategories/Tutorial_Basic.png",
+          "Name": "Tutorial Recipes"
+        },
+        {
+          "Id": "Tutorial_2tab",
+          "Icon": "Icons/CraftingCategories/Tutorial_Basic.png",
+          "Name": "Tutorial 2 Recipes"
+        }
+      ],
+      "TierLevels": [
+        {
+          "CraftingTimeReductionModifier": 0.0
+        }
+      ]
+    },
+    "State": {
+      "Id": "crafting",
+      "Definitions": {}
+    },
+    "Gathering": {
+      "Breaking": {
+        "GatherType": "Benches"
+      }
+    },
+    "Support": {
+      "Down": [
+        {
+          "FaceType": "Full"
+        }
+      ]
+    },
+    "BlockSoundSetId": "Stone",
+    "ParticleColor": "#5C583E",
+    "BlockParticleSetId": "Stone"
+  },
+  "MaxStack": 1,
+  "ItemSoundSetId": "ISS_Blocks_Stone"
+}
