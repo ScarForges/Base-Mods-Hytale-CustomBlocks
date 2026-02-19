@@ -3,7 +3,7 @@
  * TUTORIAL: EnchantTableInteraction - Interaccion del Bloque
  * ============================================================
  *
- * Cuando el jugador hace click derecho en el Enchant Table,
+ * Cuando el jugador pulsa la tecla F en el Enchant Table,
  * Hytale ejecuta interactWithBlock() de esta clase.
  *
  * Lo que hacemos aqui:

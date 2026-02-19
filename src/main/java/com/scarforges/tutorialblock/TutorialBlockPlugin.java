@@ -53,7 +53,7 @@ public class TutorialBlockPlugin extends JavaPlugin {
         getLogger().at(Level.INFO).log("===========================================");
 
         // -- BLOQUE 1: Enchant Table (Custom UI) --
-        // Registra la interaccion que abre la UI al hacer click derecho.
+        // Registra la interaccion que abre la UI al pulsar la tecla F.
         // Conecta el string "Tutorial_EnchantTableInteraction" del JSON
         // con la clase Java EnchantTableInteraction.
         this.getCodecRegistry(Interaction.CODEC).register(

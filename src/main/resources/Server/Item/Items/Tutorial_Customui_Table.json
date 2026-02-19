@@ -1,7 +1,7 @@
 {
   "TranslationProperties": {
     "Name": "Tutorial Enchant Table",
-    "Description": "A custom enchanting table. Right-click to open the enchantment UI!"
+    "Description": "A custom enchanting table. Press F to open the enchantment UI!"
   },
   "Icon": "Icons/ItemsGenerated/Tutorial1.png",
   "Categories": [

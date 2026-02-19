@@ -3,7 +3,7 @@
  * TUTORIAL: EnchantTablePanel - UI Interactiva
  * ============================================================
  *
- * Esta es la pagina de UI que se abre al hacer click derecho
+ * Esta es la pagina de UI que se abre al pulsar la tecla F
  * en el Enchant Table. Tiene un boton que envia un mensaje
  * al chat del jugador.
  *

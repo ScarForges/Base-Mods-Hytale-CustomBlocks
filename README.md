@@ -27,7 +27,7 @@ TutorialCustomBlock/
     │   ├── TutorialBlockPlugin.java          # Plugin principal - registra todo en setup()
     │   │
     │   ├── interaction/
-    │   │   └── EnchantTableInteraction.java  # Interaccion: abre la UI al click derecho
+    │   └── EnchantTableInteraction.java  # Interaccion: abre la UI al pulsar la tecla F
     │   │
     │   ├── ui/
     │   │   ├── EventActionData.java          # CODEC para datos de eventos de UI
@@ -77,12 +77,12 @@ TutorialCustomBlock/
 
 **Patron:** `SimpleBlockInteraction` + `InteractiveCustomUIPage`
 
-El jugador hace click derecho en el bloque y se abre una UI custom con un boton "SAY HELLO".
+El jugador pulsa la tecla F en el bloque y se abre una UI custom con un boton "SAY HELLO".
 Al pulsarlo, envia un mensaje al chat y actualiza el texto de la UI en tiempo real.
 
 **Flujo:**
 ```
-Click derecho en bloque
+Tecla F en bloque
   → JSON: "Use": "Tutorial_Open_EnchantUI"
   → RootInteractions → Interactions → Java CODEC
   → EnchantTableInteraction.interactWithBlock()
@@ -107,7 +107,7 @@ Al cerrar el inventario, cuenta los stacks, envia un mensaje y borra todo.
 
 **Flujo:**
 ```
-Click derecho en bloque
+Tecla F en bloque
   → JSON: "Use": "Open_Container" (interaccion nativa)
   → Se abre el inventario (27 slots)
   → onOpen() → guarda PlayerRef, envia saludo
@@ -129,7 +129,7 @@ Incluye **2 categorias** de crafteo configuradas (`Tutorial_Basic` y `Tutorial_2
 
 **Flujo:**
 ```
-Click derecho en bloque
+Tecla F en bloque
   → JSON: "Use": "Open_Bench" (interaccion nativa)
   → Se abre la UI de crafteo nativa
   → Muestra categorias y recetas configuradas en el JSON
@@ -156,7 +156,7 @@ El JAR se genera en `build/libs/ScarTutorialCustomBlock-1.0.0.jar`.
 3. Usa `/give Tutorial_Customui_Table` para obtener el bloque de UI
 4. Usa `/give Tutorial_Trash_Block` para obtener el bloque inventario
 5. Usa `/give Tutorial_Craft_Table` para obtener la mesa de crafteo
-6. Coloca y haz click derecho en cada bloque para probar
+6. Coloca y pulsa F en cada bloque para probar
 
 ---
 
